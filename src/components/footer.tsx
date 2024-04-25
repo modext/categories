@@ -108,35 +108,39 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-        <div className="border-t  border-gray-200 pb-3"></div>
+      <div className="border-t  border-gray-200 pb-3"></div>
       <div className="justify-between md:flex items-center ">
-      <div className="md:flex">
-        <span className="font-medium pt-4 text-sm">+1 (201) 500-2007</span>
-        <p className=" md:ml-2 md:mr-4 lg:ml-6 lg:mr-10 pt-4 font-medium text-sm">
-          hello@influencerstockexchange.com
-        </p>
-        <div className="pt-4 flex space-x-4">
-          {/* Icons or text for social media links */}
-          <a href="#" className="hover:text-blue-600 font-medium text-sm">
-            <Image
-              src={instagram}
-              alt="instagram Logo"
-              width={16}
-              height={16}
-            />
-          </a>
-          <a href="#" className="hover:text-blue-600 font-medium text-sm">
-            <Image src={tiktok} alt="tiktok Logo" width={16} height={16} />
-          </a>
-          <a href="#" className="hover:text-blue-600 font-medium text-sm">
-            <Image src={linkedin} alt="linkedin Logo" width={16} height={16} />
-          </a>
-          <a href="#" className="hover:text-blue-600 font-medium text-sm">
-            <Image src={twitter} alt="twitter Logo" width={16} height={16} />
-          </a>
+        <div className="md:flex">
+          <span className="font-medium pt-4 md:pt-1 text-sm">+1 (201) 500-2007</span>
+          <p className=" md:ml-2 md:mr-4 lg:ml-6 lg:mr-10 pt-4 md:pt-1 font-medium text-sm">
+            hello@influencerstockexchange.com
+          </p>
+          <div className="pt-4 md:pt-1 flex space-x-4">
+            <a href="#" className="hover:text-blue-600 font-medium text-sm">
+              <Image
+                src={instagram}
+                alt="instagram Logo"
+                width={16}
+                height={16}
+              />
+            </a>
+            <a href="#" className="hover:text-blue-600 font-medium text-sm">
+              <Image src={tiktok} alt="tiktok Logo" width={16} height={16} />
+            </a>
+            <a href="#" className="hover:text-blue-600 font-medium text-sm">
+              <Image
+                src={linkedin}
+                alt="linkedin Logo"
+                width={16}
+                height={16}
+              />
+            </a>
+            <a href="#" className="hover:text-blue-600 font-medium text-sm">
+              <Image src={twitter} alt="twitter Logo" width={16} height={16} />
+            </a>
+          </div>
         </div>
-        </div>
-        <p className=" my-9 md:pt-3  font-medium text-mygray-100 text-sm">
+        <p className=" py-9 md:py-0 font-medium text-mygray-100 text-sm">
           © 2024 INFLUENCER STOCK EXCHANGE, Inc.
         </p>
       </div>
