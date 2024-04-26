@@ -1,5 +1,3 @@
-// src/services/blogService.ts
-
 import axios from 'axios';
 
 export async function fetchBlogPosts(): Promise<Post[]> {

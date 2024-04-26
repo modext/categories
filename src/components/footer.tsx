@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         <div className="md:w-[398px]">
           <div>
             <Image src={logo} alt="ISE Logo" width={86} height={40} />
-            <p className="text-mygray-100 my-7 font-medium text-xs">
+            <p className="text-mygray-100 my-7 font-medium leading-[22.4px] text-xs">
               The Influencer Stock Exchange (ISE) website, developed by
               InFluTrade Inc., serves as a pioneering marketplace where users
               can explore and engage in the world of influencer investment.

@@ -16,7 +16,7 @@ import Image from 'next/image';
 
 const Home: React.FC = () => {
   const socialMedia = [
-    { name: 'YouTube', icon: '/youtube-icon.png' },
+    { name: 'YouTube', icon: '/images/youtube-icon.png' },
     { name: 'TikTok', icon: '/tiktok-icon.png' },
     { name: 'Instagram', icon: '/instagram-icon.png' }
   ];

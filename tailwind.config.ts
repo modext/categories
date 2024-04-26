@@ -18,7 +18,8 @@ const config: Config = {
         'myblue-100': "#2742C6",
         'mygray-50': "#ECECEC",
         'mygray-60': "#F8F8F8",
-        'mygray-70': "##B828E",
+        'mygray-70': "#7B828E",
+        'mygray-80': "#9A9DAD",
         'mygray-100': "#363D4E",
       }
     },

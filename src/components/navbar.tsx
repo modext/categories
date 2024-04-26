@@ -13,7 +13,7 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { label: "About us", href: "/about-us" },
   { label: "How it Works", href: "/how-it-works" },
-  { label: "Blogs", href: "/blogs" },
+  { label: "Blogs", href: "/blog" },
   { label: "Support", href: "support" },
   { label: "ISE University", href: "ISE-university" },
 ];
@@ -29,12 +29,12 @@ const Navbar: React.FC = () => {
   );
 
   return (
-    <header className="flex justify-between items-center h-16 border-b  border-gray-200 bg-white md:drop-shadow-lg py-2 px-6">
+    <header className="flex justify-between items-center h-16 border-b  border-gray-200 bg-white md:drop-shadow-lg py-2 px-6 lg:px-[78px]">
       <div className="flex  items-center">
         <Image src={logo} alt="ISE Logo" width={86} height={40} />
       </div>
       <div className="flex items-center justify-center">
-        <nav className="hidden md:flex md:space-x-3 lg:space-x-4">
+        <nav className="hidden md:flex md:space-x-3 lg:space-x-12">
           {navLinks.map((link, index) => (
             <NavLinkComponent key={index} {...link} />
           ))}
