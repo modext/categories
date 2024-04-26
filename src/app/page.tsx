@@ -15,9 +15,8 @@ import React from 'react';
 import Image from 'next/image';
 
 const Home: React.FC = () => {
-  // Add your social media icons and influencer images URLs
   const socialMedia = [
-    { name: 'YouTube', icon: '/youtube-icon.png' },
+    { name: 'YouTube', icon: '/images/youtube-icon.png' },
     { name: 'TikTok', icon: '/tiktok-icon.png' },
     { name: 'Instagram', icon: '/instagram-icon.png' }
   ];
@@ -25,12 +24,10 @@ const Home: React.FC = () => {
   const influencers = [
     { name: 'Influencer 1', image: '/influencer1.png' },
     { name: 'Influencer 2', image: '/influencer2.png' },
-    // ... other influencers
   ];
 
   return (
     <div className="bg-white">
-      {/* Main Banner Section */}
       <section className="text-center p-8 md:text-left md:flex md:justify-between md:p-20">
         <div className="space-y-6 md:w-1/2">
           <h1 className="text-4xl font-bold">Unlock the Power of Influencer Stocks</h1>
@@ -50,7 +47,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Influencer Image Grid */}
       <section className="p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {influencers.map((influencer) => (
           <div key={influencer.name} className="rounded-lg overflow-hidden shadow-md">
