@@ -1,44 +1,3 @@
-// 'use client';
-// import Link from 'next/link';
-// import { usePathname } from 'next/navigation';
-
-// const NavLinks = [
-// 	{ id: 1, name: 'Home', path: '/' },
-// 	{ id: 2, name: 'Blog', path: '/blog' },
-// ];
-
-// const Navbar = () => {
-// 	const pathname = usePathname();
-// 	const isActive = (path) => path === pathname;
-
-// 	return (
-// 		<nav>
-// 			<div className="navbar">
-// 				<Link href="/">
-// 					<span className="logo">NextWp</span>
-// 				</Link>
-// 				<ul>
-// 					{NavLinks.map((link) => {
-// 						return (
-// 							<li key={link.id}>
-// 								<Link
-// 									href={link.path}
-// 									className={isActive(link.path) ? 'active' : ''}
-// 								>
-// 									{link.name}
-// 								</Link>
-// 							</li>
-// 						);
-// 					})}
-// 				</ul>
-// 			</div>
-// 		</nav>
-// 	);
-// };
-
-// export default Navbar;
-// components/Header.tsx
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -54,7 +13,7 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { label: "About us", href: "/about-us" },
   { label: "How it Works", href: "/how-it-works" },
-  { label: "Blogs", href: "blogs" },
+  { label: "Blogs", href: "/blogs" },
   { label: "Support", href: "support" },
   { label: "ISE University", href: "ISE-university" },
 ];
@@ -70,7 +29,7 @@ const Navbar: React.FC = () => {
   );
 
   return (
-    <header className="flex justify-between items-center h-16 bg-white drop-shadow-lg py-2 px-6">
+    <header className="flex justify-between items-center h-16 border-b  border-gray-200 bg-white md:drop-shadow-lg py-2 px-6">
       <div className="flex  items-center">
         <Image src={logo} alt="ISE Logo" width={86} height={40} />
       </div>
@@ -86,9 +45,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className="">
-        {/* <button className="flex md:hidden text-black text-3xl">☰</button> */}
         <div className="text-xs flex md:hidden">
-          {/* <FiMenu /> */}
           <Image src={menu} alt="menu" width={32} height={32} />
         </div>
         <button className="w-{106px} h-10 hidden md:flex bg-myblue-100  text-white py-2 md:mr-14 px-4 rounded t font-semibold">

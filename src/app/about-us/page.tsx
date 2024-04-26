@@ -1,5 +1,3 @@
-// pages/about.tsx
-
 import React from "react";
 import Image from "next/image";
 
@@ -19,7 +17,6 @@ const AboutPage: React.FC = () => {
                     real investment opportunities.
                 </p>
 
-                {/* Section - Our Mission */}
                 <div className="mt-12">
                     <h2 className="text-3xl font-bold">Our Mission</h2>
                     <p className="mt-4 text-gray-600 text-lg">
@@ -32,7 +29,6 @@ const AboutPage: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Image and Text Grid */}
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
                     <div>
                         <Image
@@ -50,7 +46,6 @@ const AboutPage: React.FC = () => {
                             market. Here&apos;s how you can get involved:
                         </p>
                         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {/* Icons with text */}
                             <div className="flex flex-col items-center sm:items-start">
                                 <Image
                                     src="/browse-icon.png"

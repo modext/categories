@@ -1,5 +1,3 @@
-// pages/how-it-works.tsx
-
 import React from 'react';
 import Image from 'next/image';
 
@@ -12,13 +10,11 @@ const HowItWorksPage: React.FC = () => {
           Welcome to the Influencer Stock Exchange, the pioneering platform where the influence of social media stars becomes a tangible asset...
         </p>
         
-        {/* Sections for Different Users */}
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-center sm:text-left">For Influencers</h2>
           <p className="mt-4 text-gray-600 text-lg">
             At ISE, our mission is to democratize the value of social media influence...
           </p>
-          {/* Placeholder for Screenshot or Chart */}
           <div className="mt-4">
             <Image src="/influencer-dashboard.png" alt="Influencer Dashboard" width={600} height={300} objectFit="contain" />
           </div>
@@ -29,7 +25,6 @@ const HowItWorksPage: React.FC = () => {
           <p className="mt-4 text-gray-600 text-lg">
             At ISE, our mission is to democratize the value of social media influence...
           </p>
-          {/* Placeholder for Screenshot or Chart */}
           <div className="mt-4">
             <Image src="/investor-dashboard.png" alt="Investor Dashboard" width={600} height={300} objectFit="contain" />
           </div>
@@ -40,7 +35,6 @@ const HowItWorksPage: React.FC = () => {
           <p className="mt-4 text-gray-600 text-lg">
             At ISE, our mission is to democratize the value of social media influence...
           </p>
-          {/* Placeholder for Screenshot or Chart */}
           <div className="mt-4">
             <Image src="/why-influencer-dashboard.png" alt="Why Influencer Dashboard" width={600} height={300} objectFit="contain" />
           </div>
