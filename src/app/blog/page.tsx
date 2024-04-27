@@ -1,11 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { fetchBlogPosts } from "@/utils/blogService";
-import { ToggleTabs } from "@/components/Buttons/toggletabs";
-import Sponsor from "@/components/sponsor";
-import maryann from "../../../../public/svg/maryann.svg";
-import OnePost from "@/components/onePost";
-import twoMen from "../../../public/images/twoMen.png";
+import Sponsor from "../../components/sponsor";
+import OnePost from "../../components/onePost";
+import { ToggleTabs } from "../../components/Buttons/toggletabs";
+
+
 
 interface BlogPostsProps {
   blogPosts: Post[];

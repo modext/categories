@@ -1,13 +1,29 @@
 import React from 'react';
 import PostCard from './postCard';
 
+const samplePostCardData = [
+  {
+    title: "Meet Bomi Fagbemi, Co-Founder of Bioloop.",
+    description:
+      "In this month’s Business Spotlight, Bomi speaks on his journey building ",
+    imageUrl: "/images/sampleThumbnail.png",
+    articleUrl: "/post/sample-article",
+  },
+  {
+    title: "Meet Bomi Fagbemi, Co-Founder of Bioloop.",
+    description:
+      "In this month’s Business Spotlight, Bomi speaks on his journey building ",
+    imageUrl: "/images/sampleThumbnail.png",
+    articleUrl: "/post/sample-article",
+  },
+];
 
-const PostCardList: React.FC<PostsListProps> = ({ posts }) => {
+const PostCardList: React.FC = () => {
   return (
-    <div className="px-4 py-8">
-      <h2 className="text-2xl font-bold mb-6">More posts like this</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post, index) => (
+    <div className="px-6 py-9 bg-myblue-20">
+      <h2 className=" text-[34px] font-semibold mb-[52px]">More posts like this</h2>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {samplePostCardData.map((post, index) => (
           <PostCard key={index} {...post} />
         ))}
       </div>

@@ -1,11 +1,8 @@
 
 import React from "react";
 import Image from "next/image";
-import logo from "../../public/svg/Logo.svg";
-import linkedin from "../../public/svg/linkedin.svg";
-import twitter from "../../public/svg/twitter.svg";
-import instagram from "../../public/svg/instagram.svg";
-import tiktok from "../../public/svg/tiktok.svg";
+
+
 
 const Footer: React.FC = () => {
   return (
@@ -13,7 +10,7 @@ const Footer: React.FC = () => {
       <div className="md:flex  mb-10 justify-between">
         <div className="md:w-[398px]">
           <div>
-            <Image src={logo} alt="ISE Logo" width={86} height={40} />
+            <Image src="/svg/logo.svg"alt="ISE Logo" width={86} height={40} />
             <p className="text-mygray-100 my-7 font-medium leading-[22.4px] text-xs">
               The Influencer Stock Exchange (ISE) website, developed by
               InFluTrade Inc., serves as a pioneering marketplace where users
@@ -67,25 +64,25 @@ const Footer: React.FC = () => {
           <div className="pt-4 md:pt-1 flex space-x-4">
             <a href="#" className="hover:text-blue-600 font-medium text-sm">
               <Image
-                src={instagram}
+                src="/svg/instagram.svg"
                 alt="instagram Logo"
                 width={16}
                 height={16}
               />
             </a>
             <a href="#" className="hover:text-blue-600 font-medium text-sm">
-              <Image src={tiktok} alt="tiktok Logo" width={16} height={16} />
+              <Image src="/svg/tiktok.svg" alt="tiktok Logo" width={16} height={16} />
             </a>
             <a href="#" className="hover:text-blue-600 font-medium text-sm">
               <Image
-                src={linkedin}
+                src="/svg/linkedin.svg"
                 alt="linkedin Logo"
                 width={16}
                 height={16}
               />
             </a>
             <a href="#" className="hover:text-blue-600 font-medium text-sm">
-              <Image src={twitter} alt="twitter Logo" width={16} height={16} />
+              <Image src="/svg/twitter.svg" alt="twitter Logo" width={16} height={16} />
             </a>
           </div>
         </div>

@@ -2,14 +2,21 @@
 "use client";
 import React, { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { ArticleCard } from "@/components/articleCard";
+import { ArticleCard } from "../../../../components/articleCard";
+import AppPromotion from "../../../../components/appPromotion";
+import PostCardList from "../../../../components/PostCardList";
+
+
+
+
 
 const sampleArticleData = {
   title: "How to position your team for success",
   date: "Friday, January 14, 2022",
-  category:"Influencer Spotlight",
-  imageUrl:  "/images/momAndChild.png",
-  excepts:"In this week’s Business Spotlight, Awele talks us through her journey, some challenges she has faced, and what she has found most rewarding through it all",
+  category: "Influencer Spotlight",
+  imageUrl: "/images/momAndChild.png",
+  excepts:
+    "In this week’s Business Spotlight, Awele talks us through her journey, some challenges she has faced, and what she has found most rewarding through it all",
   content: `
   On a journey to de-stigmatise anxiety through a series of art therapy sessions across Nigeria, Awele Ogwu has turned
   a personal experience into an opportunity to create an outlet for many others to network, express themselves and
@@ -37,6 +44,9 @@ but it was also quite exciting and rewarding. We had prepped for this session fo
 many people would show up. We put the word out and sold out in a few days, which encouraged us to push through
 and put more into the session.
     `,
+  authorName: "Skylar Vaccaro",
+  authorTitle: "Product Marketing and Communications",
+  authorThumbnail: "/images/momAndChildSmall.png",
 };
 
 const ArticlePage: React.FC = () => {
@@ -63,8 +73,9 @@ const ArticlePage: React.FC = () => {
 
   if (!post)
     return (
-      <div className="bg-white pt-6 pb-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-white pt-6 ">
+        <div className="container mx-auto ">
+        {/* <div className="container mx-auto px-6 sm:px-6 lg:px-8"> */}
           <ArticleCard
             title={sampleArticleData.title}
             category={sampleArticleData.category}
@@ -72,7 +83,12 @@ const ArticlePage: React.FC = () => {
             date={sampleArticleData.date}
             imageUrl={sampleArticleData.imageUrl}
             content={sampleArticleData.content}
+            authorName={sampleArticleData.authorName}
+            authorTitle={sampleArticleData.authorTitle}
+            authorThumbnail={sampleArticleData.authorThumbnail}
           />
+          <PostCardList />
+          <AppPromotion />
           {/* Other page content */}
         </div>
       </div>
