@@ -1,9 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/svg/Logo.svg";
-import menu from "../../public/svg/menu.svg";
-import { FiMenu } from "react-icons/fi";
+import { PrimaryButton } from "./Buttons/PrimaryButton";
 
 type NavLink = {
   label: string;
@@ -31,7 +29,7 @@ const Navbar: React.FC = () => {
   return (
     <header className="flex justify-between items-center h-16 border-b  border-gray-200 bg-white md:drop-shadow-lg py-2 px-6 lg:px-[78px]">
       <div className="flex  items-center">
-        <Image src={logo} alt="ISE Logo" width={86} height={40} />
+        <Image src="svg/logo.svg" alt="ISE Logo" width={86} height={40} />
       </div>
       <div className="flex items-center justify-center">
         <nav className="hidden md:flex md:space-x-3 lg:space-x-12">
@@ -46,11 +44,15 @@ const Navbar: React.FC = () => {
 
       <div className="">
         <div className="text-xs flex md:hidden">
-          <Image src={menu} alt="menu" width={32} height={32} />
+          <Image src="/svg/menu.svg" alt="menu" width={32} height={32} />
         </div>
-        <button className="w-{106px} h-10 hidden md:flex bg-myblue-100  text-white py-2 md:mr-14 px-4 rounded t font-semibold">
-          Go to App
-        </button>
+
+        <Link href={`/auth/login`} scroll={false}>
+          <PrimaryButton
+            className="w-{106px} h-10 hidden md:flex bg-myblue-100  text-white py-2 md:mr-14 px-4 rounded t font-semibold"
+            title="Go to App"
+          />
+        </Link>
       </div>
     </header>
   );

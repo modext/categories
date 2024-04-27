@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ArticleFooter from "./articleFooter";
 
 export const ArticleCard: React.FC<ArticleCardProps> = ({
   title,
@@ -8,11 +9,18 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
   content,
   excepts,
   category,
+  authorName,
+  authorTitle,
+  authorThumbnail,
 }) => {
   const mobileImageUrl = imageUrl.replace(".png", "Small.png");
+  const articleUrl = "https://www.yoursite.com/current-article";
 
   return (
-    <article className=" max-w-4xl mx-auto ">
+    <article className=" max-w-4xl mx-auto px-6 sm:px-6 lg:px-8 pt-6 pb-16  ">
+        <div className="mb-[86px]">
+
+  
       <div className="flex space-x-7 pt-9">
         <p className="text-sm font-bold text-myblack-100 mb-6">{category}</p>
         <p className="text-sm font-medium text-mygray-70 mb-6">{date}</p>
@@ -36,6 +44,13 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
         dangerouslySetInnerHTML={{ __html: content }}
       /> */}
       {/* You might want to sanitize the content before using dangerouslySetInnerHTML */}
+      </div>
+      <ArticleFooter 
+        name={authorName}
+        role={authorTitle}
+        profilePic={authorThumbnail}
+        articleUrl={articleUrl}
+      />
     </article>
   );
 };

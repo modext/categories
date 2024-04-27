@@ -30,19 +30,30 @@ declare global {
     content: string;
     excepts: string;
     category: string;
+    authorName: string;
+    authorTitle: string;
+    authorThumbnail: string;
   }
   interface PostCardProps {
     title: string;
     description: string;
     imageUrl: string;
+    articleUrl: string;
   }
   interface singlePostCardProps {
     title: string;
     description: string;
     imageUrl: string;
+    articleUrl: string;  
   }
 
   interface PostsListProps {
     posts: singlePostCardProps[];
+  }
+  interface ArticleFooterProps {
+    name: string;
+    role: string;
+    profilePic: string;
+    articleUrl: string;
   }
 }
