@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
   return (
     <header className="flex justify-between items-center h-16 border-b  border-gray-200 bg-white md:drop-shadow-lg py-2 px-6 lg:px-[78px]">
       <div className="flex  items-center">
-        <Image src="svg/logo.svg" alt="ISE Logo" width={86} height={40} />
+        <Image src="/svg/Logo.svg" alt="ISE Logo" width={86} height={40} />
       </div>
       <div className="flex items-center justify-center">
         <nav className="hidden md:flex md:space-x-3 lg:space-x-12">
@@ -54,6 +54,7 @@ const Navbar: React.FC = () => {
           />
         </Link>
       </div>
+      
     </header>
   );
 };

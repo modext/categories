@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         'myblack-90': "#393E46",
         'myblack-100': "#060809",
+        'myblue-5': "#FAFAFA",
         'myblue-20': "#F3F5FC",
         'myblue-100': "#2742C6",
         'mygray-50': "#ECECEC",
@@ -25,6 +26,7 @@ const config: Config = {
         'mygray-90': "#8F96A3",
         'mygray-100': "#363D4E",
         'mygray-110': "#E9EBEC",        
+        'mygray-120': "#4D5462",        
       }
     },
   },
