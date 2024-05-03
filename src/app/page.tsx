@@ -8,7 +8,7 @@ import MonetizeSocial from "@/components/monetizeSocial";
 import InvestmentFeatures from "@/components/investmentFeatures";
 import FaqSection from "@/components/faqSection";
 import ChatWidget from "@/components/ChatWidget";
-
+import Influencers from "@/components/influencers";
 
 type TagProps = {
   text: string;
@@ -88,88 +88,7 @@ const InfluencerStockPower: React.FC = () => {
             />
           </Link>
         </div>
-        <div className="grid grid-cols-3 gap-5 mt-6 mb-[37.94px] md:w-full  lg:pr-[31px]">
-          <div className="relative w-full hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/svg/Rectangle30.svg"
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-          <div className="relative w-full hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/svg/Ellipse6.svg"
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-          <div className="relative w-full hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/svg/Star3.svg"
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-          <div className="relative w-full hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/svg/Star5.svg"
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-          <div className="relative w-full col-span-2 hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/svg/Rectangle28.svg"
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-          <div className="relative w-full hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/svg/Ellipse5.svg"
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-          <div className="relative w-full hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/svg/Star2.svg"
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-          <div className="relative w-full hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/svg/Rectangle29.svg"
-              alt=""
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-        </div>
+        <Influencers />
       </div>
       <div className="px-6 pt-[88px] pb-[116px] md:px-[78px]  md:py-[106px] bg-myblue-20">
         <h3 className="md:text-[155px] font-medium text-[72px] leading-[72px] md:leading-[148.8px] pb-10 ">
@@ -242,9 +161,9 @@ const InfluencerStockPower: React.FC = () => {
             <Image
               src="/svg/Frame.svg"
               alt=""
-              object-fit= "cover"             
-              width={365} 
-              height={150} 
+              object-fit="cover"
+              width={365}
+              height={150}
               className="rounded-b-[16.73px]"
             />
           </div>
@@ -264,8 +183,8 @@ const InfluencerStockPower: React.FC = () => {
             <Image
               src="/svg/blocks.svg"
               alt=""
-              object-fit= "cover"             
-               width={365}
+              object-fit="cover"
+              width={365}
               height={150}
               className="rounded-b-[16.73px] pt-3"
             />
