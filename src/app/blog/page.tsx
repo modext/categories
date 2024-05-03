@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Sponsor from "../../components/sponsor";
 import OnePost from "../../components/onePost";
 import { ToggleTabs } from "../../components/Buttons/toggletabs";
+import Sponsors from "./sponsors/page";
 
 
 // Then, use this interface in getStaticProps to type the response data
@@ -15,9 +16,11 @@ import { ToggleTabs } from "../../components/Buttons/toggletabs";
 //   };
 // }
 
-// const BlogPage: React.FC = () => {
-const BlogPage: React.FC<BlogPostsProps> = () => {
-  // State to manage active tab
+interface BlogPostsProps {
+  blogPosts: Post[];
+}
+
+const BlogPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Blogs");
   const [bPosts, setBPosts] = useState([]);
 
@@ -71,63 +74,7 @@ const BlogPage: React.FC<BlogPostsProps> = () => {
     },
   ];
 
-  const brandData = [
-    {
-      logo: "/svg/sentinelone.svg",
-
-      title: "Sentinel One",
-      description: "AI-driven endpoint security solutions...",
-    },
-    {
-      logo: "/svg/blissy.svg",
-      title: "Sentinel One",
-      description:
-        "Cosy House Collection offers a range of high-quality bedding and home essentials designed to provide comfort and style at an affordable price. ",
-    },
-    {
-      logo: "/svg/blissy.svg",
-      title: "Sentinel One",
-      description: "AI-driven endpoint security solutions...",
-    },
-    {
-      logo: "/svg/cossyHouse.svg",
-
-      title: "Cosy House Collection",
-      description:
-        "Cosy House Collection offers a range of high-quality bedding and home essentials designed to provide comfort and style at an affordable price. ",
-    },
-    {
-      logo: "/svg/cossyHouse.svg",
-
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    {
-      logo: "/svg/cossyHouse.svg",
-
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    {
-      logo: "/svg/cossyHouse.svg",
-
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    {
-      logo: "/svg/cossyHouse.svg",
-
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    {
-      logo: "/svg/cossyHouse.svg",
-
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    // ... More brands
-  ];
+  
   const renderPosts = (tabName: string): JSX.Element | null => {
     let postsArray: Post[] = [];
     switch (tabName) {
@@ -141,18 +88,7 @@ const BlogPage: React.FC<BlogPostsProps> = () => {
 
     if (tabName === "Sponsors") {
       return (
-        <div className="pb-[34px] justify-center pt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-16 justify-center">
-            {brandData.map((brand, index) => (
-              <Sponsor
-                key={index}
-                logo={brand.logo}
-                title={brand.title}
-                description={brand.description}
-              />
-            ))}
-          </div>
-        </div>
+       <Sponsors />
       );
     } else {
       return (
