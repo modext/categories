@@ -3,12 +3,8 @@ import React, { useState, useEffect } from "react";
 import Sponsor from "../../components/sponsor";
 import OnePost from "../../components/onePost";
 import { ToggleTabs } from "../../components/Buttons/toggletabs";
+import Sponsors from "./sponsors/page";
 
-
-
-interface BlogPostsProps {
-  blogPosts: Post[];
-}
 
 // Then, use this interface in getStaticProps to type the response data
 
@@ -20,9 +16,11 @@ interface BlogPostsProps {
 //   };
 // }
 
-// const BlogPage: React.FC = () => {
-const BlogPage: React.FC<BlogPostsProps> = () => {
-  // State to manage active tab
+interface BlogPostsProps {
+  blogPosts: Post[];
+}
+
+const BlogPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Blogs");
   const [bPosts, setBPosts] = useState([]);
 
@@ -76,45 +74,7 @@ const BlogPage: React.FC<BlogPostsProps> = () => {
     },
   ];
 
-  const brandData = [
-    {
-      title: "Sentinel One",
-      description: "AI-driven endpoint security solutions...",
-    },
-    {
-      title: "Sentinel One",
-      description: "AI-driven endpoint security solutions...",
-    },
-    {
-      title: "Sentinel One",
-      description: "AI-driven endpoint security solutions...",
-    },
-    {
-      title: "Sentinel One",
-      description: "AI-driven endpoint security solutions...",
-    },
-    {
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    {
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    {
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    {
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    {
-      title: "Blissy",
-      description: "Compact, sleek device designed to promote...",
-    },
-    // ... More brands
-  ];
+  
   const renderPosts = (tabName: string): JSX.Element | null => {
     let postsArray: Post[] = [];
     switch (tabName) {
@@ -128,17 +88,7 @@ const BlogPage: React.FC<BlogPostsProps> = () => {
 
     if (tabName === "Sponsors") {
       return (
-        <div className="pb-[34px] pt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
-            {brandData.map((brand, index) => (
-              <Sponsor
-                key={index}
-                title={brand.title}
-                description={brand.description}
-              />
-            ))}
-          </div>
-        </div>
+       <Sponsors />
       );
     } else {
       return (
@@ -152,7 +102,7 @@ const BlogPage: React.FC<BlogPostsProps> = () => {
               category={post.category}
               date={post.date}
               imageUrl={post.imageUrl}
-              postType={tabName} 
+              postType={tabName}
             />
           ))}
         </div>
@@ -162,7 +112,7 @@ const BlogPage: React.FC<BlogPostsProps> = () => {
 
   return (
     <>
-      <main className=" flex flex-col items-center py-14 px-6 md:px-[78px] bg-white ">
+      <main className=" flex flex-col justify-center items-center py-14 px-6 md:px-8 lg:px-[78px] bg-white ">
         <ToggleTabs
           tabs={tabs}
           activeTab={activeTab}

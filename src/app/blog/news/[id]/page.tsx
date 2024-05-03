@@ -74,8 +74,8 @@ const ArticlePage: React.FC = () => {
   if (!post)
     return (
       <div className="bg-white pt-6 ">
-        <div className="container mx-auto ">
-        {/* <div className="container mx-auto px-6 sm:px-6 lg:px-8"> */}
+        <div className=" justify-center px-6 md:px-20 lg:w-full  md:w-full ">
+        {/* <div className="container mx-auto px-6 sm:px-6 lg:px-8">  lg:mx-[78px]*/}
           <ArticleCard
             title={sampleArticleData.title}
             category={sampleArticleData.category}
@@ -87,10 +87,10 @@ const ArticlePage: React.FC = () => {
             authorTitle={sampleArticleData.authorTitle}
             authorThumbnail={sampleArticleData.authorThumbnail}
           />
+        </div>
           <PostCardList />
           <AppPromotion />
           {/* Other page content */}
-        </div>
       </div>
     );
 };

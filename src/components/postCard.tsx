@@ -14,7 +14,7 @@ const PostCard: React.FC<PostCardProps> = ({
         <Image src={imageUrl} layout="fill" objectFit="cover" alt={title} />
       </div>
       <div className="px-[25px] py-6">
-        <Link href={articleUrl} className="p-4">
+        <Link href={articleUrl} className="p-4 md:p-0">
           <h3 className="text-lg font-semibold">{title}</h3>
           <p className=" text-[15px] font-medium text-gray-600 mt-1">{description}</p>
         </Link>

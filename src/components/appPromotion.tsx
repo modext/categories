@@ -4,13 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { PrimaryButton } from "./Buttons/PrimaryButton";
 
-interface AppPromotionProps {
-  title: string;
-  description: string;
-  buttonText: string;
-  buttonHref: string;
-  imageUrl?: string;
-}
 
 const AppPromotion: React.FC = () => {
   const details = {
@@ -23,7 +16,7 @@ const AppPromotion: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center bg-myblack-100 text-white">
       <div className="flex flex-col mt-[74px] mb-[82px] mx-[31px]">
-        <div className="w-[286px] mb-14">
+        <div className="w-[286px] md:w-[537px] mb-14">
           <h1 className="text-[45px] font-semibold leading-[58px]">
             {details.title}
           </h1>
@@ -32,7 +25,7 @@ const AppPromotion: React.FC = () => {
 
         <Link href={details.buttonHref}>
           <PrimaryButton
-            className="w-[205px] h-[49px] justify-center items-centerflex bg-myblue-100  text-white py-2 md:mr-14 px-4 rounded-[5px] font-medium text-sm"
+            className="w-[205px] h-[49px] justify-center items-centerflex bg-myblue-100  text-white py-2  px-4 rounded-[5px] font-medium text-sm"
             title={details.buttonText}
           />
         </Link>
