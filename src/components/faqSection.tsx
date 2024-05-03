@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 
 interface FaqItemProps {
@@ -62,7 +63,7 @@ const FaqSection: React.FC = () => {
   ];
 
   return (
-    <div className=" w-full my-[96px]">
+    <div className="  bg-white w-full py-[96px] px-6 lg:px-[78px]">
       <h2 className=" text-[40px] font-medium leading-10 text-gray-900 mb-6">Frequently asked questions</h2>
       <dl className=" ">
         {faqs.map((faq, index) => (

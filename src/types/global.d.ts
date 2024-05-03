@@ -22,7 +22,10 @@ declare global {
     imageUrl: string;
     postType: string;
   }
-
+  interface BlogPostsProps {
+    blogPosts: Post[];
+  }
+  
   interface ArticleCardProps {
     title: string;
     date: string;

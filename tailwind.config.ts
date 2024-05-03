@@ -27,7 +27,13 @@ const config: Config = {
         'mygray-100': "#363D4E",
         'mygray-110': "#E9EBEC",        
         'mygray-120': "#4D5462",        
-      }
+      },
+      width: {
+        'custom-lg': '622px' // Custom width for large screens
+      },
+      height: {
+        'custom-lg': '371px' // Custom height for large screens
+      },
     },
   },
   plugins: [],

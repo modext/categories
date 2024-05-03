@@ -8,8 +8,8 @@ import AppPromotion from "@/components/appPromotion";
 const ContactPage: React.FC = () => {
   return (
     <>
-      <div className="bg-white p-6 md:px-[78px]">
-        <div className="flex flex-col  mt-[65px] lg:flex-row justify-between items-center gap-8">
+      <div className="bg-white py-6 ">
+        <div className="flex flex-col px-6  lg:px-[78px] mt-[65px] lg:flex-row justify-between items-center gap-8">
           <div className="  lg:w-1/2">
             <h2 className="text-[50px] font-semibold mt-9 lg:mt-0 ">Get in Touch</h2>
             <p className="mb-4 text-2xl font-medium text-mygray-120 py-12">

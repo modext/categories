@@ -4,9 +4,6 @@ import Sponsor from "../../components/sponsor";
 import OnePost from "../../components/onePost";
 import { ToggleTabs } from "../../components/Buttons/toggletabs";
 
-interface BlogPostsProps {
-  blogPosts: Post[];
-}
 
 // Then, use this interface in getStaticProps to type the response data
 

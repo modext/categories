@@ -38,24 +38,22 @@
 
 // export default page;
 // pages/posts/[id].tsx
-
+"use client"
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import axios from 'axios';
 import { URL } from '@/utils/config';
-import { useParams } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 
 
-const PostDetail: React.FC = async() => {
+const PostDetail: React.FC = () => {
 
   const params = useParams<{ id: string }>()
 
   const router = useRouter();
-  const { id } = router.query;
   const [post, setPost] = useState<Post | null>(null); 
 
-const req = await fetch(`${URL}/posts?_fields=id,slug,title,content&slug=${params.id}`)
-const pages = await req.json()
+// const req = await fetch(`${URL}/posts?_fields=id,slug,title,content&slug=${params.id}`)
+// const pages = await req.json()
   
   // useEffect(() => {
   //   async function fetchPost() {
