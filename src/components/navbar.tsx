@@ -14,8 +14,8 @@ type NavLink = {
 export const navLinks: NavLink[] = [
   { label: "About us", href: "/about-us" },
   { label: "How it Works", href: "/how-it-works" },
-  { label: "Blogs", href: "/blog" },
-  { label: "Support", href: "support" },
+  { label: "ISE Insights", href: "/ise-insights/blogs" },
+  { label: "Support", href: "/support" },
   { label: "ISE University", href: "ISE-university", inset:"Coming soon" },
 ];
 

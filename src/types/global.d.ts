@@ -1,3 +1,5 @@
+import { Url } from "url";
+
 export {};
 
 declare global {
@@ -20,12 +22,39 @@ declare global {
     category: string;
     date: string;
     imageUrl: string;
-    postType: string;
+    href: Url  | string ;
   }
   interface BlogPostsProps {
     blogPosts: Post[];
   }
-  
+  interface ArticlePost {
+    id: number;
+    slug: string;
+    title: {
+        rendered: string;
+    };
+    acf: {
+        author: string;
+        author_title: string;
+        blog_title: string; 
+        cadre_of_content: string;
+        category: number; 
+        content: string;
+        date: string;
+        large_image: string;
+        post_type: string;
+        summary: string;
+        small: {
+          sizes:{
+            thumbnail: string
+          }
+            ID: number;
+            id: number;
+            title: string;
+            filename: string;
+        };
+    };
+}
   interface ArticleCardProps {
     title: string;
     date: string;

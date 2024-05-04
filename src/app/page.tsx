@@ -46,8 +46,8 @@ const InfluencerStockPower: React.FC = () => {
               <Image
                 src="/svg/youtubeLogoColored.svg"
                 alt="Youtube"
-                width={0}
-                height={0}
+                width={71.75}
+                height={15.75}
                 sizes="100vw"
                 style={{ width: "100%", height: "auto" }}
               />
@@ -60,8 +60,8 @@ const InfluencerStockPower: React.FC = () => {
               <Image
                 src="/svg/tiktokLogoColored.svg"
                 alt="TikTok"
-                width={0}
-                height={0}
+                width={71.75}
+                height={15.75}
                 sizes="100vw"
                 style={{ width: "100%", height: "auto" }}
               />
@@ -74,8 +74,8 @@ const InfluencerStockPower: React.FC = () => {
               <Image
                 src="/svg/instagramLogoColored.svg"
                 alt="Instagram"
-                width={0}
-                height={0}
+                width={119.47}
+                height={28}
                 sizes="100vw"
                 style={{ width: "100%", height: "auto" }}
               />
