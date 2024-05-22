@@ -11,18 +11,13 @@ const ArticleFooter: React.FC<ArticleFooterProps> = ({
   return (
     <div className="  ">
       <div className="flex items-center mb-4 space-x-[25px]">
-        {/* <div className="relative h-[334px] md:h-full md:w-[651px]"> */}
           <Image
             src={profilePic}
             alt={`Profile of ${name}`}
-            // layout="fill"
-            // objectFit="contain"
             width={48}
             height={48}
             className="rounded-full"
           />
-        {/* </div> */}
-
         <div className="ml-4 ">
           <p className="font-bold text-[15px] mb-[7px] text-myblack-100">{name}</p>
           <p className=" font-medium text-sm text-myblack-90">{role}</p>
@@ -32,7 +27,6 @@ const ArticleFooter: React.FC<ArticleFooterProps> = ({
       <p className=" font-medium text-xs text-mygray-90  leading-[22px] my-[25px]">SHARE THIS POST ON</p>
 
       <div className="flex space-x-4">
-        {/* Replace 'yourURL' with the actual article URL */}
         <a
           href={`https://www.facebook.com/sharer/sharer.php?u=${articleUrl}`}
           target="_blank"

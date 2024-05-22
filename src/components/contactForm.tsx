@@ -33,15 +33,39 @@ const ContactForm: React.FC = () => {
       message: "",
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
-      console.log(values);
-      // Handle form submission, e.g. send data to an API
+    onSubmit: async (values, { setSubmitting }) => {
+      try {
+        const response = await fetch('/api/sendEmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: values.fullName,
+            email: values.email,
+            phone: values.phone,
+            message: values.message,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to send message');
+        }
+
+        alert('Message sent successfully!');
+        formik.resetForm();  
+      } catch (error:any) {
+        alert(error.message);
+      } finally {
+        setSubmitting(false);  
+      }
     },
   });
 
+
   return (
     <>
-      <div className="flex justify-center lg:mt-[22px] lg:mb-[46px] items-center">
+      <div className="hidden md:flex justify-center lg:mt-[22px] lg:mb-[46px] items-center">
         <Image src="/svg/Logo.svg" alt="ISE Logo" width={86} height={40} />
       </div>{" "}
       <form className="" onSubmit={formik.handleSubmit}>
@@ -124,7 +148,7 @@ const ContactForm: React.FC = () => {
         <PrimaryButton
           disabled={!formik.isValid || formik.isSubmitting}
           type="submit"
-          className="w-full h-14 hidden md:flex bg-myblue-100 items-center justify-center  text-white py-2 md:mr-14 px-4 rounded t font-semibold"
+          className="w-full h-14  bg-myblue-100 items-center justify-center  text-white py-2 md:mr-14 px-4 rounded t font-semibold"
           title="Submit"
         />
       </form>

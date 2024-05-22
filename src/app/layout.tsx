@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ChatWidget from "@/components/ChatWidget";
-
+import CookieBanner from "@/components/cookieBanner";
 
 export const metadata: Metadata = {
   title: "ISE",
@@ -19,9 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="custom-font">
         <Navbar />
-        {children} 
+        {children}
+        <CookieBanner />
+        <ChatWidget />
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

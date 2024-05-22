@@ -4,9 +4,9 @@ import { RxTriangleUp } from "react-icons/rx";
 
 const MonetizeSocial: React.FC = () => {
   return (
-    <div className=" py-[54px]  md:px-[78px]  md:py-[106px] bg-white">
+    <div className="   md:px-[78px]   bg-white">
       <div className="">
-        <div className="px-6 pt-[88px] pb-[116px]  md:py-[106px] ">
+        <div className="px-6 pt-[88px] pb-[50px]  md:py-[106px] ">
           <h3 className=" font-medium text-[72px] md:text-[160px] leading-[72px] md:leading-[148.8px] md:-tracking-[9.6px] md:max-w-[1074px] pb-10 ">
             Monetize your Social Influence{" "}
           </h3>
@@ -30,7 +30,7 @@ const MonetizeSocial: React.FC = () => {
             </div>
             <div className="md:w-1/2">
               <Image
-                src="/svg/sittingLady.svg"
+                src="/png/sitter.png"
                 alt="Social Media Stats"
                 width={500}
                 height={300}
@@ -38,7 +38,7 @@ const MonetizeSocial: React.FC = () => {
             </div>
           </div>
           <div className="md:flex md:flex-col lg:flex-row lg:flex-wrap lg:justify-center md:gap-10 ">
-            <div className="flex flex-col  px-[26px] text-center pt-[56px] md:pt-[72px]  bg-[#E7F1FE] rounded-lg md:flex-col items-center  mb-12 lg:mb-0">
+            <div className="flex flex-col justify-between px-[26px] text-center pt-[56px] md:pt-[72px]  bg-[#E7F1FE] rounded-lg md:flex-col items-center  mb-12 lg:mb-0">
               <div className="lg:max-w-[430px] mb-[41px] md:mx-[68px] md:mb-[77px]">
                 <h2 className="text-4xl font-semibold pb-5">
                   Earn from Your Influence
@@ -48,17 +48,18 @@ const MonetizeSocial: React.FC = () => {
                   media activity.
                 </p>
               </div>
-              <div className="md:w-[437px] rounded-t-lg bg-white px-[21px] pt-[21px]">
+              <div className=""
+               >
                 <Image
-                  src="/svg/influencers.svg"
+                  src="/png/influencers.png"
                   alt="influencers"
                   width={500}
                   height={300}
-                  className="hover:scale-105 transition-transform duration-300"
+                  className="md:w-[437px] md:h-[252px] hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
-            <div className="flex flex-col px-[26px] text-center pt-[56px] md:pt-[72px]  bg-[#F7F0E2] rounded-lg md:flex-col items-center  md:mb-0 ">
+            <div className="flex flex-col px-[26px] text-center pt-[56px] md:pt-[72px] justify-between  bg-[#F7F0E2] rounded-lg md:flex-col items-center  md:mb-0 ">
               <div className="lg:max-w-[430px] mb-[41px] md:mx-[68px] md:mb-[77px]">
                 <h2 className="text-4xl font-semibold text-[#143201] mb-5">
                   Grow Together{" "}
@@ -68,15 +69,15 @@ const MonetizeSocial: React.FC = () => {
                   your investors
                 </p>
               </div>
-              <div className="md:w-[437px] rounded-t-lg bg-[#1C1F26] px-[21px]  pt-[21px]">
+              <div className="md:w-[437px] md:h-[260px] align-bottom rounded-t-lg bg-[#1C1F26] px-[21px] md:pb-10  pt-[21px]">
                 <Image
-                  src="/svg/singer.svg"
+                  src="/png/singer.png"
                   alt="singer"
                   width={500}
-                  height={300}
-                  className="rounded hover:scale-105 transition-transform duration-300"
+                  height={250}
+                  className="rounded  hover:scale-105 transition-transform duration-300"
                 />
-                <div className="flex justify-between items-center pt-[2px] md:pt-[13px] pb-[5px] md:pb-[9px] text-white">
+                <div className="flex justify-between items-center pt-[2px] md:pt-2 pb-[5px] md:pb-[9px] text-white">
                   <p className=" text-[18px] leading-[21.94px] font-semibold">
                     Courtney Henry
                   </p>

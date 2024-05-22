@@ -7,7 +7,6 @@ import EmpowerPortfolio from "@/components/empowerPortfolio";
 import MonetizeSocial from "@/components/monetizeSocial";
 import InvestmentFeatures from "@/components/investmentFeatures";
 import FaqSection from "@/components/faqSection";
-import ChatWidget from "@/components/ChatWidget";
 import Influencers from "@/components/influencers";
 
 type TagProps = {
@@ -28,7 +27,7 @@ const Tag: React.FC<TagProps> = ({ text, bgColor, textColor }) => {
 const InfluencerStockPower: React.FC = () => {
   return (
     <>
-      <div className="lg:flex  xl:gap-[100px] justify-between bg-white p-6 sm:p-12 md:pt-[193px] md:px-12">
+      <div className="lg:flex  xl:gap-[100px] justify-between bg-white p-6 sm:p-12  items-center md:pt-14 md:px-12">
         <div className=" pr-8 lg:pr-0 lg:pl-[48px] lg:max-w-[650px] lg:w-1/2 mb-10 ">
           <h1 className="  text-[50.45px] md:text-[70.45px] md:leading-[72px] leading-[55.5px] md:font-semibold font-semibold  pt-9 md:pt-[58px] mb-[46px] md:mb-[72px] ">
             Unlock the Power of Influencer Stocks
@@ -41,15 +40,15 @@ const InfluencerStockPower: React.FC = () => {
             <Link
               target="_blank"
               href="https://youtube.com/@InfluencerStockExchange?si=qiDGS34E3ASnNsib"
-              className="relative  mr-[22.75px]  w-[71.75px] md:w-[82.18px] h-[15.75px]"
+              className="relative  mr-[22.75px]  md:w-[126.18px] md:h-[32px] h-[28px]"
             >
               <Image
-                src="/svg/youtubeLogoColored.svg"
+                src="/png/youtubeC.png"
                 alt="Youtube"
                 width={71.75}
                 height={15.75}
                 sizes="100vw"
-                style={{ width: "100%", height: "auto" }}
+                style={{ width: "100%", height: "100%" }}
               />
             </Link>
             <Link
@@ -72,7 +71,7 @@ const InfluencerStockPower: React.FC = () => {
               className="relative  w-[119.47px] md:w-[136.53px] h-[28px]"
             >
               <Image
-                src="/svg/instagramLogoColored.svg"
+                src="/png/instagramC.png"
                 alt="Instagram"
                 width={119.47}
                 height={28}
@@ -81,14 +80,17 @@ const InfluencerStockPower: React.FC = () => {
               />
             </Link>
           </div>
-          <Link href="">
+          <Link href="https://app.influencerstockexchange.com" target="_blank">
             <PrimaryButton
               className="w-[205px] h-[49px] justify-center items-centerflex bg-myblue-100  text-white py-2  px-4 rounded-[5px] font-medium text-sm"
               title="Go to App"
             />
           </Link>
         </div>
-        <Influencers />
+
+        <div className="w-auto lg:w-[591px] justify-center  flex items-center">
+          <Influencers />
+        </div>
       </div>
       <div className="px-6 pt-[88px] pb-[116px] md:px-[78px]  md:py-[106px] bg-myblue-20">
         <h3 className="md:text-[155px] font-medium text-[72px] leading-[72px] md:leading-[148.8px] pb-10 ">
@@ -153,13 +155,13 @@ const InfluencerStockPower: React.FC = () => {
             </h2>
             <p className="text-[20.91px] leading-[29.28px] font-medium mt-[16.73px]">
               From lifestyle gurus to gaming sensations, there&apos;s an
-              influencer for everyone browse through.
+              influencer for everyone to browse through.
             </p>
           </div>
 
           <div className="relative w-full transition-transform duration-300 hover:scale-105">
             <Image
-              src="/svg/Frame.svg"
+              src="/images/browseTheRed.jpg"
               alt=""
               object-fit="cover"
               width={365}
@@ -196,7 +198,6 @@ const InfluencerStockPower: React.FC = () => {
       <InvestmentFeatures />
       <FaqSection />
       <AppPromotion />
-      <ChatWidget />
     </>
   );
 };

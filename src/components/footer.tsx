@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="md:flex  mb-10 justify-between">
         <div className="md:w-[398px]">
           <div>
-            <Image src="/svg/logo.svg" alt="ISE Logo" width={86} height={40} />
+            <Image src="/svg/Logo.svg" alt="ISE Logo" width={86} height={40} />
             <p className="text-mygray-100 my-7 font-medium leading-[22.4px] text-xs">
               The Influencer Stock Exchange (ISE) website, developed by
               InFluTrade Inc., serves as a pioneering marketplace where users
@@ -37,18 +37,37 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-col md:w-44 lg:w-[223.56px] space-y-2">
             <h3 className="font-bold text-sm pb-6">Company</h3>
-            <a href="#" className="hover:text-blue-600 font-medium text-sm">
+            <Link
+              href={"/about-us"}
+              className="hover:text-blue-600 font-medium text-sm"
+            >
               About us
-            </a>
-            <a href="#" className="hover:text-blue-600 font-medium text-sm">
+            </Link>
+
+            <Link
+              href={"/support"}
+              className="hover:text-blue-600 font-medium text-sm"
+            >
               Contact us
-            </a>
-            <a href="#" className="hover:text-blue-600 font-medium text-sm">
+            </Link>
+            <Link
+              href={"/support"}
+              className="hover:text-blue-600 font-medium text-sm"
+            >
               Support
-            </a>
-            <a href="#" className="hover:text-blue-600 font-medium text-sm">
+            </Link>
+            <Link
+              href={"/terms"}
+              className="hover:text-blue-600 font-medium text-sm"
+            >
               Terms of Use
-            </a>
+            </Link>
+            <Link
+              href={"/privacy-policy"}
+              className="hover:text-blue-600 font-medium text-sm"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </div>
@@ -63,7 +82,7 @@ const Footer: React.FC = () => {
           </p>
           <div className="pt-4 md:pt-1 flex space-x-4">
             <Link
-            target="_blank"
+              target="_blank"
               href="https://www.instagram.com/influencerstockexchange?igsh=bGxnZmVldm83OXVz"
               className="hover:text-blue-600 font-medium text-sm"
             >
@@ -75,7 +94,7 @@ const Footer: React.FC = () => {
               />
             </Link>
             <Link
-            target="_blank"
+              target="_blank"
               href="https://www.tiktok.com/@influencerstockexchange?_t=8lqnpWle3jZ&_r=1"
               className="hover:text-blue-600 font-medium text-sm"
             >
@@ -87,7 +106,7 @@ const Footer: React.FC = () => {
               />
             </Link>
             <Link
-            target="_blank"
+              target="_blank"
               href="https://www.linkedin.com/"
               className="hover:text-blue-600 font-medium text-sm"
             >
@@ -99,8 +118,8 @@ const Footer: React.FC = () => {
               />
             </Link>
             <Link
-            target="_blank"
-              href='https://x.com/isestockx?s=11'
+              target="_blank"
+              href="https://x.com/isestockx?s=11"
               className="hover:text-blue-600 font-medium text-sm"
             >
               <Image
@@ -110,9 +129,6 @@ const Footer: React.FC = () => {
                 height={16}
               />
             </Link>
-
-
-            
           </div>
         </div>
         <p className=" py-9 md:py-0 font-medium text-mygray-100 text-sm">

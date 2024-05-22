@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Sponsor from "@/components/sponsor";
 import { ToggleTabs } from "@/components/Buttons/toggletabs";
 
@@ -7,77 +8,33 @@ const tabs = [
   { name: "News", route: "news" },
   { name: "Sponsors", route: "sponsors" },
 ];
-const brandData = [
-  {
-    logo: "/svg/sentinelone.svg",
+const reqUrl =
+  "https://ise-insights.up.railway.app/wp-json/wp/v2/sponsor?acf_format=standard&_fields=id,slug,title,category,acf";
 
-    title: "Sentinel One",
-    description: "AI-driven endpoint security solutions...",
-  },
-  {
-    logo: "/svg/blissy.svg",
-    title: "Sentinel One",
-    description:
-      "Cosy House Collection offers a range of high-quality bedding and home essentials designed to provide comfort and style at an affordable price. ",
-  },
-  {
-    logo: "/svg/blissy.svg",
-    title: "Sentinel One",
-    description: "AI-driven endpoint security solutions...",
-  },
-  {
-    logo: "/svg/cossyHouse.svg",
+  const Sponsors: React.FC = () => {
+  const [sponsorList, setSponsorList] = useState<any[]>([]);
 
-    title: "Cosy House Collection",
-    description:
-      "Cosy House Collection offers a range of high-quality bedding and home essentials designed to provide comfort and style at an affordable price. ",
-  },
-  {
-    logo: "/svg/cossyHouse.svg",
+  useEffect(() => {
+    const fetchData = async () => {
+      const req = await fetch(reqUrl);
+      const sponsors = await req.json();
+      setSponsorList(sponsors);
+    };
 
-    title: "Blissy",
-    description: "Compact, sleek device designed to promote...",
-  },
-  {
-    logo: "/svg/cossyHouse.svg",
-
-    title: "Blissy",
-    description: "Compact, sleek device designed to promote...",
-  },
-  {
-    logo: "/svg/cossyHouse.svg",
-
-    title: "Blissy",
-    description: "Compact, sleek device designed to promote...",
-  },
-  {
-    logo: "/svg/cossyHouse.svg",
-
-    title: "Blissy",
-    description: "Compact, sleek device designed to promote...",
-  },
-  {
-    logo: "/svg/cossyHouse.svg",
-
-    title: "Blissy",
-    description: "Compact, sleek device designed to promote...",
-  },
-  // ... More brands
-];
-
-const Sponsors: React.FC = () => {
+    fetchData();
+  }, []);
   return (
     <main className=" flex flex-col justify-center items-center py-14 px-6 md:px-8 lg:px-[78px] bg-white ">
       <ToggleTabs tabs={tabs} activeTab={"sponsors"} />
 
       <div className="pb-[34px] justify-center pt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-16 justify-center">
-          {brandData.map((brand, index) => (
+          {sponsorList.map((brand, index) => (
             <Sponsor
-              key={index}
-              logo={brand.logo}
-              title={brand.title}
-              description={brand.description}
+              key={brand.id}
+              logo={brand.acf.small.sizes.large}
+              title={brand.title.rendered}
+              description={brand.acf.description}
             />
           ))}
         </div>

@@ -16,7 +16,7 @@ export const navLinks: NavLink[] = [
   { label: "How it Works", href: "/how-it-works" },
   { label: "ISE Insights", href: "/ise-insights/blogs" },
   { label: "Support", href: "/support" },
-  { label: "ISE University", href: "ISE-university", inset:"Coming soon" },
+  { label: "ISE University", href: "/", inset:"Coming soon" },
 ];
 
 const NavLinkComponent = ({ label, href }: NavLink) => (
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           <Image src="/svg/menu.svg" alt="menu" width={32} height={32} />
         </div>
 
-        <Link href={`/`} scroll={false}>
+        <Link href={`https://app.influencerstockexchange.com`} scroll={false}>
           <PrimaryButton
             className="w-{106px} h-10 hidden md:flex bg-myblue-100  text-white py-2  px-4 rounded t font-semibold"
             title="Go to App"

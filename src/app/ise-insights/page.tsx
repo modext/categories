@@ -18,7 +18,6 @@ const BlogPage: React.FC = () => {
   ];
 
   const activeTab = params.id;
-  console.log(activeTab)
 
   const renderComponent = () => {
     switch (activeTab) {
@@ -35,7 +34,6 @@ const BlogPage: React.FC = () => {
 
   return (
     <main className="flex flex-col justify-center items-center  px-6 md:px-8 lg:px-[78px] bg-white">
-      {/* <ToggleTabs tabs={tabs} activeTab={"blogs"} /> */}
       {renderComponent()}
     </main>
   );

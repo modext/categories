@@ -15,6 +15,10 @@ declare global {
     name: string;
     content: () => JSX.Element | null;
   }
+  interface Message {
+    text: string;
+    user: "user" | "AI";
+  }
   interface OnePostProps {
     id: number;
     title: string;
@@ -87,5 +91,17 @@ declare global {
     role: string;
     profilePic: string;
     articleUrl: string;
+  }
+}
+interface Gtag {
+  (command: 'config', targetId: string, config?: object): void;
+  (command: 'set', params: object): void;
+  (command: 'event', action: string, params?: object): void;
+  (command: 'consent', action: 'update', params: object): void;
+}
+
+declare global {
+  interface Window {
+    gtag: Gtag;
   }
 }

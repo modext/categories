@@ -1,6 +1,4 @@
-// components/AppPromotion.tsx
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { PrimaryButton } from "./Buttons/PrimaryButton";
 
@@ -11,7 +9,7 @@ const AppPromotion: React.FC = () => {
     description:
       "Dive into the world of social influence investing and capitalize on the growth of your favorite influencers",
     buttonText: "Go to App",
-    buttonHref: "/",
+    buttonHref: "https://app.influencerstockexchange.com",
   };
   return (
     <div className="flex flex-col items-center justify-center text-center bg-myblack-100 text-white">
@@ -23,7 +21,7 @@ const AppPromotion: React.FC = () => {
           <p className="mt-[17px] text-lg font-medium leading-[26px]">{details.description}</p>
         </div>
 
-        <Link href={details.buttonHref}>
+        <Link href={details.buttonHref}  target="_blank">
           <PrimaryButton
             className="w-[205px] h-[49px] justify-center items-centerflex bg-myblue-100  text-white py-2  px-4 rounded-[5px] font-medium text-sm"
             title={details.buttonText}

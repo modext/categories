@@ -40,6 +40,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
               key={index}
               href={link.href}
               className="flex text-lg font-semibold px-4 py-5 text-bneutral-300 hover:bg-gray-100 rounded-sm border-b  border-gray-200 items-center"
+              onClick={onMenuItemClick}
             >
               {link.label}{" "}
               {link.inset && (
@@ -49,7 +50,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
               )}
             </Link>
           ))}
-          <Link href={`/`} scroll={false}>
+          <Link href={`https://app.influencerstockexchange.com`} scroll={false}>
             <PrimaryButton
               className="w-full h-10 md:flex bg-myblue-100  text-white py-2  px-4 rounded mt-[88px] font-semibold"
               title="Go to App"

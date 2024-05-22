@@ -16,18 +16,24 @@ const NewsList: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const req = await fetch(reqUrl);
-      const news = await req.json();
-      console.log("newslist", news);
-      setNewsList(news);
+      try {
+        const response = await fetch(reqUrl);
+        if (!response.ok) { 
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const news = await response.json();
+        setNewsList(news);
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      }
     };
-
+  
     fetchData();
   }, []);
   return (
     <main className=" flex flex-col justify-center items-center py-14 px-6 md:px-8 lg:px-[78px] bg-white ">
       <ToggleTabs tabs={tabs} activeTab={"news"} />
-      <div className="w-full md:my-16">
+      <div className="w-full  ">
         {newsList.map((news: any) => (
           <OnePost
             key={news.id}
@@ -37,7 +43,7 @@ const NewsList: React.FC = () => {
             category={news.acf.cadre_of_content}
             date={news.acf.date}
             imageUrl={news.acf.large_image}
-            href={`/news/${news?.slug}`}
+            href={`news/${news?.slug}`}
           />
         ))}
       </div>

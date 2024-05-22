@@ -1,6 +1,15 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import AppPromotion from "@/components/appPromotion";
+import VideoSkeleton from "@/components/videoSkeleton";
+import VideoComponent from "@/components/videoComponent";
+
+const forInfluencers =
+  "https://www.youtube.com/embed/BwAqhJ8WZZw?si=fsgg9FwEEXCO1XBE?rel=0";
+const forInvestors =
+  "https://www.youtube.com/embed/Wv5PsT5cBjI?si=hyneKBP25zcfEy6-?rel=0";
+const whyInfluencerstock =
+  "https://www.youtube.com/embed/4Ru_fOST0S0?si=h7JX_qooocAHP1YV?rel=0";
 
 const HowItWorksPage: React.FC = () => {
   return (
@@ -30,15 +39,9 @@ const HowItWorksPage: React.FC = () => {
               real-world returns.{" "}
             </p>
             <div className="flex justify-center  rounded-sm md:rounded-md  lg:h-[535px] mt-[66px]">
-              <Image
-                src="/images/desktopFrame.png"
-                alt="Why Influencer Dashboard"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full object-contain"
-                style={{ width: "100%", height: "auto" }}
-              />
+              <Suspense fallback={<VideoSkeleton />}>
+                <VideoComponent src={forInfluencers} />
+              </Suspense>
             </div>
           </div>
 
@@ -53,15 +56,9 @@ const HowItWorksPage: React.FC = () => {
               real-world returns.
             </p>
             <div className="flex justify-center  rounded-sm md:rounded-md  lg:h-[535px] mt-[66px]">
-              <Image
-                src="/images/desktopFrame.png"
-                alt="Why Influencer Dashboard"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full object-contain"
-                style={{ width: "100%", height: "auto" }}
-              />
+              <Suspense fallback={<VideoSkeleton />}>
+                <VideoComponent src={forInvestors} />
+              </Suspense>
             </div>
           </div>
 
@@ -76,15 +73,9 @@ const HowItWorksPage: React.FC = () => {
               real-world returns.
             </p>
             <div className="flex justify-center  rounded-sm md:rounded-md  lg:h-[535px] mt-[66px]">
-              <Image
-                src="/images/desktopFrame.png"
-                alt="Why Influencer Dashboard"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full object-contain"
-                style={{ width: "100%", height: "auto" }}
-              />
+              <Suspense fallback={<VideoSkeleton />}>
+                <VideoComponent src={whyInfluencerstock} />
+              </Suspense>
             </div>
           </div>
         </div>
@@ -100,7 +91,7 @@ const HowItWorksPage: React.FC = () => {
           and turn engagement into investment.
         </p>
       </div>
-        <AppPromotion />
+      <AppPromotion />
     </>
   );
 };

@@ -14,7 +14,7 @@ const OnePost: React.FC<OnePostProps> = ({
 }) => {
 
   return (
-    <div className=" w-full flex flex-col md:flex-row justify-center md:justify-between items-center bg-white my-4 md:w-full  md:h-[334px] ">
+    <div className=" w-full flex flex-col md:flex-row justify-center md:justify-between items-center bg-white my-16 md:w-full  md:h-[334px] ">
       <div className="relative w-full h-[334px] md:h-full md:w-[651px]">
         <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" className=" rounded-lg" />
       </div>
