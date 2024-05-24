@@ -27,9 +27,24 @@ const HowItWorksPage: React.FC = () => {
             Dive into a new realm where following your favorite influencer can
             translate into real investment opportunities.{" "}
           </p>
-
           <div className="mt-[86px]">
-            <h2 className=" text-[28px] font-semibold  md:text-center md:t">
+            <h2 className=" text-[28px] md:text-[38px] items-center font-semibold  md:text-center md:t">
+              Why Influencer Stock
+            </h2>
+            <p className="mt-4 text-mygray-120 font-medium text-lg">
+              At ISE, our mission is to democratize the value of social media
+              influence. We envision a world where every tweet, post, and share
+              holds more than just digital weight—it holds potential for
+              real-world returns.
+            </p>
+            <div className="flex justify-center  rounded-sm md:rounded-md  lg:h-[535px] mt-[66px]">
+              <Suspense fallback={<VideoSkeleton />}>
+                <VideoComponent src={whyInfluencerstock} />
+              </Suspense>
+            </div>
+          </div>
+          <div className="mt-[65px]">
+            <h2 className=" text-[28px] md:text-[38px] font-semibold  md:text-center md:t">
               For Influencers
             </h2>
             <p className="mt-10 text-mygray-120 text-lg font-medium md:font-medium md:text-2xl">
@@ -45,7 +60,7 @@ const HowItWorksPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-[65px]">
+          <div className="mt-12 mb-12">
             <h2 className=" text-[28px] md:text-[38px] font-semibold  md:text-center md:t">
               For Investors
             </h2>
@@ -58,23 +73,6 @@ const HowItWorksPage: React.FC = () => {
             <div className="flex justify-center  rounded-sm md:rounded-md  lg:h-[535px] mt-[66px]">
               <Suspense fallback={<VideoSkeleton />}>
                 <VideoComponent src={forInvestors} />
-              </Suspense>
-            </div>
-          </div>
-
-          <div className="mt-12 mb-12">
-            <h2 className=" text-[28px] md:text-[38px] items-center font-semibold  md:text-center md:t">
-              Why Influencer Stock
-            </h2>
-            <p className="mt-4 text-mygray-120 font-medium text-lg">
-              At ISE, our mission is to democratize the value of social media
-              influence. We envision a world where every tweet, post, and share
-              holds more than just digital weight—it holds potential for
-              real-world returns.
-            </p>
-            <div className="flex justify-center  rounded-sm md:rounded-md  lg:h-[535px] mt-[66px]">
-              <Suspense fallback={<VideoSkeleton />}>
-                <VideoComponent src={whyInfluencerstock} />
               </Suspense>
             </div>
           </div>

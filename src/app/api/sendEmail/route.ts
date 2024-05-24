@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
-  const { email, name, message } = await request.json();
+  const { name, email, phone, message } = await request.json();
+
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     host: "smtp.gmail.com",
@@ -17,7 +18,7 @@ export async function POST(request: NextRequest) {
     from: email,
     to: process.env.TARGET_EMAIL,
     subject: `New Support Message from ${name}`,
-    text: message,
+    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
   };
   try {
     await transporter.sendMail(mailOptions);

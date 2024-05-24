@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Image from "next/image";
+import { toast } from "react-toastify";
 import { PrimaryButton } from "./Buttons/PrimaryButton";
 
 interface FormValues {
@@ -35,10 +36,10 @@ const ContactForm: React.FC = () => {
     validationSchema: validationSchema,
     onSubmit: async (values, { setSubmitting }) => {
       try {
-        const response = await fetch('/api/sendEmail', {
-          method: 'POST',
+        const response = await fetch("/api/sendEmail", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             name: values.fullName,
@@ -49,19 +50,17 @@ const ContactForm: React.FC = () => {
         });
 
         if (!response.ok) {
-          throw new Error('Failed to send message');
+          throw new Error("Failed to send message");
         }
-
-        alert('Message sent successfully!');
-        formik.resetForm();  
-      } catch (error:any) {
-        alert(error.message);
+        toast.success("Message sent successfully!");
+        formik.resetForm();
+      } catch (error: any) {
+        toast.error(error.message);
       } finally {
-        setSubmitting(false);  
+        setSubmitting(false);
       }
     },
   });
-
 
   return (
     <>
@@ -144,7 +143,6 @@ const ContactForm: React.FC = () => {
           <div className="text-red-500 text-sm">{formik.errors.message}</div>
         )}
 
-       
         <PrimaryButton
           disabled={!formik.isValid || formik.isSubmitting}
           type="submit"

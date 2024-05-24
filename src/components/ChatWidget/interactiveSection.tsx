@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { GridLoader } from "react-spinners";
+import ReactMarkdown from "react-markdown";
 
 interface Message {
   text: string;
@@ -16,7 +17,8 @@ interface InteractiveSectionProps {
 const InteractiveSection: React.FC<InteractiveSectionProps> = ({
   messages,
   isLoading,
-  onRequestButtonClick,
+  onRequestButtonClick
+
 }) => {
   const endOfMessagesRef = useRef<null | HTMLDivElement>(null);
 
@@ -31,7 +33,8 @@ const InteractiveSection: React.FC<InteractiveSectionProps> = ({
           <button
             key={topic}
             onClick={() => onRequestButtonClick(topic)}
-            className="border border-myblue-100 hover:border-myblue-20 hover:bg-mygray-50 font-medium text-[16px] text-myblue-100 px-4 py-2 rounded"
+            className="border border-myblue-100 hover:border-myblue-20 hover:bg-mygray-50 font-medium  text-[8px] sm:text-[16px] text-myblue-100 px-4 py-1 sm:py-2 rounded"
+
           >
             {topic}
           </button>
@@ -69,7 +72,8 @@ const InteractiveSection: React.FC<InteractiveSectionProps> = ({
                     : "self-start order-2 bg-myblue-20"
                 }`}
               >
-                {message.text}
+                <ReactMarkdown>{message.text}</ReactMarkdown>
+
               </p>
             </li>
           ))}

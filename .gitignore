@@ -37,4 +37,3 @@ next-env.d.ts
 # IDE
 .idea
 node_modules
-node_modules

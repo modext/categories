@@ -4,6 +4,8 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ChatWidget from "@/components/ChatWidget";
 import CookieBanner from "@/components/cookieBanner";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   title: "ISE",
@@ -20,6 +22,18 @@ export default function RootLayout({
       <body className="custom-font">
         <Navbar />
         {children}
+        <ToastContainer
+          draggable
+          rtl={false}
+          pauseOnHover
+          closeOnClick
+          theme="dark"
+          hideProgressBar
+          autoClose={2000}
+          pauseOnFocusLoss
+          newestOnTop={false}
+          position="top-center"
+        />
         <CookieBanner />
         <ChatWidget />
         <Footer />
